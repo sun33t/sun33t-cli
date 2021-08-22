@@ -4,6 +4,12 @@
   "main": "index.js",
   "description": "Get to know Suneet through `npx sun33t`",
   "license": "MIT",
+  "repository": "sun33t/sun33t-cli",
+  "author": {
+    "name": "Suneet Misra",
+    "email": "hello@suneet.codes",
+    "url": "https://linkedin.com/in/suneetmisra"
+  },
   "bin": {
     "sun33t": "index.js"
   },
