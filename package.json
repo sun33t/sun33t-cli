@@ -10,5 +10,10 @@
   "prettier": {},
   "dependencies": {
     "cli-welcome": "^2.2.2"
-  }
+  },
+  "keywords": [
+    "suneet misra",
+    "suneet",
+    "misra"
+  ]
 }
