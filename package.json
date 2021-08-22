@@ -2,12 +2,13 @@
   "name": "sun33t-cli",
   "version": "1.0.0",
   "main": "index.js",
+  "description": "Get to know Suneet through `npx sun33t`",
   "license": "MIT",
   "bin": {
     "sun33t": "index.js"
   },
   "prettier": {},
   "dependencies": {
-    "clear-any-console": "^1.16.2"
+    "cli-welcome": "^2.2.2"
   }
 }
