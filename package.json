@@ -1,5 +1,5 @@
 {
-  "name": "sun33t-cli",
+  "name": "sun33t",
   "version": "1.0.1",
   "main": "index.js",
   "description": "Get to know Suneet through `npx sun33t`",
