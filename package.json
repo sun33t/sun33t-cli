@@ -1,0 +1,13 @@
+{
+  "name": "sun33t-cli",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "bin": {
+    "sun33t": "index.js"
+  },
+  "prettier": {},
+  "dependencies": {
+    "clear-any-console": "^1.16.2"
+  }
+}
