@@ -1,7 +1,10 @@
 #!/usr/bin/env node
 
+const clearConsole = require("clear-any-console");
+clearConsole();
+
 console.log(`
-Suneet Misra
+Suneet Misra 
 
 Hi! I'm a nodeJS developer from Liverpool, UK. You can find me at:
 
