@@ -1,6 +1,6 @@
 # `npx sun33t`
 
-Get to lknow Suneet Misra using your command line
+Get to know Suneet Misra using your command line
 
 ## Usage
 
