@@ -2,7 +2,7 @@
 	"compilerOptions": {
 		"allowJs": true,
 		"target": "ESNext",
-		"module": "ES6",
+		"module": "ESNext",
 		"esModuleInterop": true,
 		"isolatedModules": true,
 		"resolveJsonModule": true,
