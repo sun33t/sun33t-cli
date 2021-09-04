@@ -1,4 +1,4 @@
-import {nodeResolve} from '@rollup/plugin-node-resolve';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import del from 'rollup-plugin-delete';
 import typescript from 'rollup-plugin-typescript2';
@@ -23,10 +23,10 @@ const config = {
 	},
 	external: externals,
 	plugins: [
-		del({targets: ['dist']}),
+		del({ targets: ['dist'] }),
 		shebang(),
 		json(),
-		nodeResolve({extensions}),
+		nodeResolve({ extensions }),
 		commonjs(),
 		typescript({
 			tsconfigOverride: {
@@ -35,8 +35,8 @@ const config = {
 		}),
 		copy({
 			targets: [
-				{src: 'README.md', dest: 'dist'},
-				{src: 'LICENSE', dest: 'dist'},
+				{ src: 'README.md', dest: 'dist' },
+				{ src: 'LICENSE', dest: 'dist' },
 			],
 		}),
 	],
