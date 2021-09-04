@@ -1,12 +1,4 @@
-const {
-  bioColor,
-  blogColor,
-  githubColor,
-  linkedinColor,
-  titleColor,
-  urlColor,
-  workColor,
-} = require("./utils/colors");
+const { bioColor, titleColor } = require("./utils/colors");
 
 const { createSocial } = require("./utils/createSocial");
 
@@ -22,26 +14,22 @@ const socialLinks = [
   {
     title: "Blog",
     url: "https://suneet.codes",
-    titleColor: blogColor,
-    urlColor,
+    titleColor: `#6cc644`,
   },
   {
     title: "Work",
     url: "https://verse.co.uk",
-    titleColor: workColor,
-    urlColor,
+    titleColor: `#c9510c`,
   },
   {
     title: "GitHub",
     url: "https://github.com/sun33t",
-    titleColor: githubColor,
-    urlColor,
+    titleColor: `#6e5494`,
   },
   {
     title: "LinkedIn",
     url: "https://linkedin.com/in/suneetmisra",
-    titleColor: linkedinColor,
-    urlColor,
+    titleColor: `#0077b5`,
   },
 ];
 
