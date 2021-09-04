@@ -22,7 +22,7 @@
 		"dev": "rollup -cw"
 	},
 	"prettier": {
-		"bracketSpacing": false,
+		"bracketSpacing": true,
 		"arrowParens": "avoid",
 		"singleQuote": true,
 		"printWidth": 100,
