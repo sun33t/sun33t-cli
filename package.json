@@ -1,7 +1,10 @@
 {
   "name": "sun33t",
-  "version": "1.1.0",
-  "main": "index.js",
+  "version": "1.2.0",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "description": "Get to know Suneet through `npx sun33t`",
   "license": "MIT",
   "repository": "sun33t/sun33t-cli",
@@ -11,7 +14,7 @@
     "url": "https://linkedin.com/in/suneetmisra"
   },
   "bin": {
-    "sun33t": "index.js"
+    "sun33t": "dist/index.js"
   },
   "prettier": {},
   "dependencies": {
@@ -26,5 +29,8 @@
     "suneet misra",
     "suneet",
     "misra"
-  ]
+  ],
+  "devDependencies": {
+    "typescript": "^4.4.2"
+  }
 }
