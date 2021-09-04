@@ -1,6 +1,6 @@
 {
-  "name": "sun33t",
-  "version": "1.2.2",
+  "name": "sun33t-test-cli",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "files": [
     "dist"
@@ -15,9 +15,6 @@
   },
   "bin": {
     "sun33t": "dist/index.js"
-  },
-  "scripts": {
-    "prepublish": "tsc"
   },
   "prettier": {},
   "dependencies": {
