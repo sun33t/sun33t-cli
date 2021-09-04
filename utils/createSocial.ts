@@ -1,4 +1,4 @@
-import chalk from "chalk";
+import chalk from 'chalk';
 
 /**
  * @author Suneet Misra <hello@suneet.codes>
@@ -12,15 +12,15 @@ import chalk from "chalk";
  *
  * @return  {string}            Correctly formatted title block
  */
-const createColouredTitleBlock = (hexColor, title) => {
-  // add a space in front of each title.
-  const titleWithFrontPadding = title.padStart(title.length + 1, " ");
+const createColouredTitleBlock = (hexColor: string, title: string) => {
+	// add a space in front of each title.
+	const titleWithFrontPadding = title.padStart(title.length + 1, ' ');
 
-  // make each title equal in length
-  const paddedTitle = `${titleWithFrontPadding.padEnd(10, " ")}`;
+	// make each title equal in length
+	const paddedTitle = `${titleWithFrontPadding.padEnd(10, ' ')}`;
 
-  // return formatted title block
-  return `${chalk.hex(hexColor).bold.inverse(paddedTitle)}`;
+	// return formatted title block
+	return `${chalk.hex(hexColor).bold.inverse(paddedTitle)}`;
 };
 
 /**
@@ -36,11 +36,11 @@ const createColouredTitleBlock = (hexColor, title) => {
  *
  * @return  {string}              The styled url
  */
-const createColouredUrl = ({ hexColor, url }) => {
-  if (hexColor) {
-    return `${chalk.dim.underline.hex(hexColor)(url)}`;
-  }
-  return `${chalk.dim.underline.green(url)}`;
+const createColouredUrl = ({hexColor, url}: {hexColor: string; url: string}) => {
+	if (hexColor) {
+		return `${chalk.dim.underline.hex(hexColor)(url)}`;
+	}
+	return `${chalk.dim.underline.green(url)}`;
 };
 
 /**
@@ -58,18 +58,24 @@ const createColouredUrl = ({ hexColor, url }) => {
  *
  * @return  {string}              A formatted social link for the CLI
  */
-const createSocialLink = (titleColor, urlColor, title, url, index) => {
-  // determine if this is the first item in the list.
-  const isFirstItem = index === 0;
+const createSocialLink = (
+	titleColor: string,
+	urlColor: string,
+	title: string,
+	url: string,
+	index: number
+) => {
+	// determine if this is the first item in the list.
+	const isFirstItem = index === 0;
 
-  // if first item, prepend with new line character
-  const addNewLineIfAtStart = isFirstItem ? `\n` : ``;
+	// if first item, prepend with new line character
+	const addNewLineIfAtStart = isFirstItem ? `\n` : ``;
 
-  const styledTitle = createColouredTitleBlock(titleColor, title);
-  const styledUrl = createColouredUrl({ url, hexColor: urlColor });
+	const styledTitle = createColouredTitleBlock(titleColor, title);
+	const styledUrl = createColouredUrl({url, hexColor: urlColor});
 
-  // return a formatted social media link for each iteration
-  return `${addNewLineIfAtStart} ${styledTitle}  ${styledUrl}\n`;
+	// return a formatted social media link for each iteration
+	return `${addNewLineIfAtStart} ${styledTitle}  ${styledUrl}\n`;
 };
 
 /**
@@ -91,9 +97,17 @@ const createSocialLink = (titleColor, urlColor, title, url, index) => {
  *
  * @return  {string}    A formatted string block of styled social media links
  */
-export const createSocial = (socialMediaLinks) =>
-  socialMediaLinks
-    .map(({ titleColor, urlColor, title, url }, index) =>
-      createSocialLink(titleColor, urlColor, title, url, index)
-    )
-    .join("");
+export const createSocial = (socialMediaLinks: Array<any>) =>
+	socialMediaLinks
+		.map(
+			(
+				{
+					titleColor,
+					urlColor,
+					title,
+					url,
+				}: {titleColor: string; urlColor: string; title: string; url: string},
+				index: number
+			) => createSocialLink(titleColor, urlColor, title, url, index)
+		)
+		.join('');
