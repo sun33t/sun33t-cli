@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "esModuleInterop": true,
+    "module": "CommonJS",
+    "outDir": "./dist",
+    "moduleResolution": "node"
+  },
+  "exclude": ["node_modules", "dist"]
+}
