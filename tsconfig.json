@@ -3,6 +3,7 @@
     "allowJs": true,
     "esModuleInterop": true,
     "module": "CommonJS",
+    "resolveJsonModule": true,
     "outDir": "./dist",
     "moduleResolution": "node"
   },
