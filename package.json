@@ -16,6 +16,9 @@
   "bin": {
     "sun33t": "dist/index.js"
   },
+  "scripts": {
+    "prepublish": "tsc"
+  },
   "prettier": {},
   "dependencies": {
     "chalk": "^4.1.2",
