@@ -1,4 +1,4 @@
-const chalk = require("chalk");
+import chalk from "chalk";
 
-exports.titleColor = chalk.blue.bold;
-exports.bioColor = chalk.italic;
+export const titleColor = chalk.blue.bold;
+export const bioColor = chalk.italic;

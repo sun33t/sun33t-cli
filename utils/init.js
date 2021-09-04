@@ -1,9 +1,9 @@
-const pkgJson = require("../package.json");
-const welcome = require("cli-welcome");
-const checkNode = require("cli-check-node");
-const unhandled = require("cli-handle-unhandled");
+import welcome from "cli-welcome";
+import checkNode from "cli-check-node";
+import unhandled from "cli-handle-unhandled";
+import pkgJson from "../package.json";
 
-module.exports = () => {
+export const init = () => {
   unhandled();
   welcome({
     title: pkgJson.name,

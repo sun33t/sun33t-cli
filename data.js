@@ -1,6 +1,6 @@
-const { bioColor, titleColor } = require("./utils/colors");
+import { bioColor, titleColor } from "./utils/colors";
 
-const { createSocial } = require("./utils/createSocial");
+import { createSocial } from "./utils/createSocial";
 
 /** Content */
 const title = `Suneet Misra - Software Engineer`;
@@ -34,6 +34,6 @@ const socialLinks = [
 ];
 
 /** Output */
-exports.title = `${titleColor(title)}`;
-exports.bio = `${bioColor(bioText)}`;
-exports.social = createSocial(socialLinks);
+export const styledTitle = `${titleColor(title)}`;
+export const styledBio = `${bioColor(bioText)}`;
+export const styledSocial = createSocial(socialLinks);

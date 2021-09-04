@@ -1,4 +1,4 @@
-const chalk = require("chalk");
+import chalk from "chalk";
 
 /**
  * @author Suneet Misra <hello@suneet.codes>
@@ -91,7 +91,7 @@ const createSocialLink = (titleColor, urlColor, title, url, index) => {
  *
  * @return  {string}    A formatted string block of styled social media links
  */
-exports.createSocial = (socialMediaLinks) =>
+export const createSocial = (socialMediaLinks) =>
   socialMediaLinks
     .map(({ titleColor, urlColor, title, url }, index) =>
       createSocialLink(titleColor, urlColor, title, url, index)

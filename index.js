@@ -1,12 +1,14 @@
 #!/usr/bin/env node
-const log = console.log;
-const init = require("./utils/init");
-const { title, bio, social } = require("./data");
+// const meow = require("meow");
+import { init } from "./utils/init";
+import { styledBio, styledSocial, styledTitle } from "./data";
 
-init();
+const log = console.log;
+// const cli = meow();
 
 (async () => {
-  log(title);
-  log(bio);
-  log(social);
+  init();
+  log(styledTitle);
+  log(styledBio);
+  log(styledSocial);
 })();
