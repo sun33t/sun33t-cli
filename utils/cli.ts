@@ -30,6 +30,11 @@ export const options: Options<AnyFlags> = {
       default: false,
       alias: 'v',
     },
+    github: {
+      type: 'boolean',
+      default: false,
+      alias: 'g',
+    },
   },
 };
 
@@ -46,6 +51,9 @@ Options
 
   ${yellow(`--debug, -d`)}       Display debugging information
   ${yellow(`--no-debug`)}        Don't display debugging information
+
+  ${yellow(`--github, -g`)}      Display list of GitHub repos
+  ${yellow(`--no-debug`)}        Don't display GitHub repos
 
   ${yellow(`--clear, -c`)}       Clears terminal's previous output ${grey('(DEFAULT = TRUE)')}
   ${yellow(`--no-clear`)}        Doesn't clear the terminal's previous output

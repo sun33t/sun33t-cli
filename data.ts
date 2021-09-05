@@ -1,16 +1,15 @@
-import { bioColor, titleColor } from './utils/colors';
-import { createSocial } from './utils/createSocial';
+import { titleColor } from './utils/colors';
 import pkg from './package.json';
 
 /** Content */
 const title = `${pkg.author.name} - Software Engineer`;
 
-const bioText = `
+export const bioText = `
 Hi! I'm a developer from Liverpool, UK. I like building things with JavaScript and TypeScript and automating tasks by creating CLIs.
 
 Within my current role I'm using Node, TypeScript, React, NextJS, TDD, Storybook, Figma, mono-repo architecture and paired programming. I love collaboration and consider myself a life-long learner with a growth mindset which helps to keep me curious. I love sharing my knowledge with my colleagues as well as learning new things from them in turn. If you're interested in connecting with me, you can find me at:`;
 
-const socialLinks = [
+export const socialLinks = [
   {
     title: 'Blog',
     url: 'https://suneet.codes',
@@ -35,14 +34,3 @@ const socialLinks = [
 
 /** Output */
 export const styledTitle = `${titleColor(title)}`;
-export const logBio = (isBio: boolean) => {
-  if (isBio) {
-    console.log(bioColor(bioText));
-  }
-};
-
-export const logSocial = (isSocial: boolean) => {
-  if (isSocial) {
-    console.log(createSocial(socialLinks));
-  }
-};

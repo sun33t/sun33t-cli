@@ -1,4 +1,5 @@
 import chalk from 'chalk';
+import { socialLinks } from '../data';
 
 /**
  * @author Suneet Misra <hello@suneet.codes>
@@ -114,4 +115,10 @@ export const createSocial = (socialMediaLinks: Array<any>) => {
     )
     .join('');
   return links;
+};
+
+export const social = (isSocial: boolean) => {
+  if (isSocial) {
+    console.log(createSocial(socialLinks));
+  }
 };
