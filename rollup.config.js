@@ -3,7 +3,6 @@ import commonjs from '@rollup/plugin-commonjs';
 import del from 'rollup-plugin-delete';
 import typescript from 'rollup-plugin-typescript2';
 import shebang from 'rollup-plugin-preserve-shebang';
-import copy from 'rollup-plugin-copy';
 import json from '@rollup/plugin-json';
 import pkg from './package.json';
 
@@ -32,12 +31,6 @@ const config = {
       tsconfigOverride: {
         exclude: ['node_modules'],
       },
-    }),
-    copy({
-      targets: [
-        { src: 'README.md', dest: 'dist' },
-        { src: 'LICENSE', dest: 'dist' },
-      ],
     }),
   ],
 };
