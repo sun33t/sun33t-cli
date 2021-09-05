@@ -15,7 +15,7 @@ const externals = [
 ];
 
 const config = {
-  input: 'index.ts',
+  input: 'src/index.ts',
   output: {
     file: pkg.main,
     format: 'esm',

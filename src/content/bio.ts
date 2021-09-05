@@ -1,4 +1,4 @@
-import { bioColor } from './colors';
+import { bioColor } from '../utils';
 import { bioText } from '../data';
 
 export const bio = (isBio: boolean) => {

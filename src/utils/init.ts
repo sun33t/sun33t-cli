@@ -1,5 +1,5 @@
 import welcome from 'cli-welcome';
-import pkg from '../package.json';
+import pkg from '../../package.json';
 
 export const init = (isClear: boolean) => {
   welcome({

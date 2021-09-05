@@ -1,5 +1,4 @@
-import { fetchGitHubRepos } from './api';
-import { grey, green } from './colors';
+import { fetchGitHubRepos, grey, green } from '../utils';
 export const github = async () => {
   const data = await fetchGitHubRepos();
 

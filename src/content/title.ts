@@ -1,5 +1,5 @@
 import { developerTitle } from '../data';
-import { titleColor } from './colors';
+import { titleColor } from '../utils';
 
 export const title = () => {
   console.log(titleColor(developerTitle));

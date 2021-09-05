@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-import { cli, debug, init, social, bio, title, github } from './utils';
+import { cli, debug, init } from './utils';
+import { social, bio, title, github } from './content';
 
 const { flags, input } = cli;
 const isDebug = <boolean>flags.debug;
