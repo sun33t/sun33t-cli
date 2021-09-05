@@ -14,6 +14,7 @@ const isClear = <boolean>flags.clear;
 
 (async () => {
   init(isClear);
+  input.includes('help') && cli.showHelp(0);
   log(styledTitle);
   logBio(isBio);
   logSocial(isSocial);

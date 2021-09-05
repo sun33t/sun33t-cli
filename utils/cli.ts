@@ -1,47 +1,63 @@
 import meow, { AnyFlags, Options, Result } from 'meow';
-import { titleColor } from './colors';
+import { green, yellow, cyan, grey } from './colors';
 
-const options: Options<AnyFlags> = {
+export const options: Options<AnyFlags> = {
   importMeta: import.meta,
+  inferType: true,
   flags: {
     social: {
       type: 'boolean',
       default: true,
+      alias: 's',
     },
     bio: {
       type: 'boolean',
       default: true,
+      alias: 'b',
     },
     debug: {
       type: 'boolean',
       default: false,
+      alias: 'd',
     },
     clear: {
       type: 'boolean',
       default: true,
+      alias: 'c',
+    },
+    version: {
+      type: 'boolean',
+      default: false,
+      alias: 'v',
     },
   },
 };
 
 const helpText = `
-${titleColor(`Usage`)}
-  npx sun33t [options]
+Usage
+  ${green(`npx sun33t`)} ${yellow('[--option]')} ${cyan('<command>')}
 
-${titleColor(`Options`)}
-  --social      Show the social info (default is true)
-  --no-social   Don't show the social info
+Options
+  ${yellow(`--social, -s`)}      Show the social info ${grey('(DEFAULT = TRUE)')}
+  ${yellow(`--no-social`)}       Don't show the social info
 
-  --bio         Show developer bio
-  --no-bio      Don't show the developer bio
+  ${yellow(`--bio, -b`)}         Show developer bio ${grey('(DEFAULT = TRUE)')}
+  ${yellow(`--no-bio`)}          Don't show the developer bio
 
-  --debug       Display debugging information
-  --no-debug    Don't display debugging information
+  ${yellow(`--debug, -d`)}       Display debugging information
+  ${yellow(`--no-debug`)}        Don't display debugging information
+
+  ${yellow(`--clear, -c`)}       Clears terminal's previous output ${grey('(DEFAULT = TRUE)')}
+  ${yellow(`--no-clear`)}        Doesn't clear the terminal's previous output
+
+  ${yellow(`--version, -v`)}     Displays the CLI version number
+
+Commands
+  ${cyan('help')}              Show's help menu
   
-  --clear       Clears terminal's previous output
-  --no-clear    Doesn't clear the terminal's previous output
-
-${titleColor(`Examples`)}
-  npx sun33t --no-social
+Examples
+${green(`npx sun33t`)} ${yellow('--no-social')}
+${green(`npx sun33t`)} ${yellow('--debug')}
 `;
 
 export const cli: Result<AnyFlags> = meow(helpText, options);
