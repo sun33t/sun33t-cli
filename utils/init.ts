@@ -1,7 +1,7 @@
 import welcome from 'cli-welcome';
 import pkg from '../package.json';
 
-export const init = () => {
+export const init = (isClear: boolean) => {
   welcome({
     title: pkg.name,
     tagLine: '',
@@ -10,6 +10,6 @@ export const init = () => {
     color: '#000000',
     bgColor: '#fadc00',
     bold: true,
-    clear: true,
+    clear: isClear,
   });
 };

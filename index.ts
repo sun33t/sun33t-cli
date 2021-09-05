@@ -1,15 +1,21 @@
 #!/usr/bin/env node
 import { cli } from './utils/cli';
 import { init } from './utils/init';
-import { debug } from './utils/debug';
-import { styledBio, styledSocial, styledTitle } from './data';
+import { logDebug } from './utils/debug';
+import { logBio, logSocial, styledTitle } from './data';
 
 const log = console.log;
 
+const { flags, input } = cli;
+const isDebug = <boolean>flags.debug;
+const isSocial = <boolean>flags.social;
+const isBio = <boolean>flags.bio;
+const isClear = <boolean>flags.clear;
+
 (async () => {
-  init();
+  init(isClear);
   log(styledTitle);
-  cli.flags.bio && log(styledBio);
-  cli.flags.social && log(styledSocial);
-  cli.flags.debug && debug(cli.input, cli.flags);
+  logBio(isBio);
+  logSocial(isSocial);
+  logDebug(isDebug, input, flags);
 })();

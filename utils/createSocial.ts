@@ -97,8 +97,8 @@ const createSocialLink = (
  *
  * @return  {string}    A formatted string block of styled social media links
  */
-export const createSocial = (socialMediaLinks: Array<any>) =>
-  socialMediaLinks
+export const createSocial = (socialMediaLinks: Array<any>) => {
+  const links = socialMediaLinks
     .map(
       (
         {
@@ -108,6 +108,10 @@ export const createSocial = (socialMediaLinks: Array<any>) =>
           url,
         }: { titleColor: string; urlColor: string; title: string; url: string },
         index: number
-      ) => createSocialLink(titleColor, urlColor, title, url, index)
+      ) => {
+        return createSocialLink(titleColor, urlColor, title, url, index);
+      }
     )
     .join('');
+  return links;
+};

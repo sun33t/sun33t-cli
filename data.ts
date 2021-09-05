@@ -35,5 +35,14 @@ const socialLinks = [
 
 /** Output */
 export const styledTitle = `${titleColor(title)}`;
-export const styledBio = `${bioColor(bioText)}`;
-export const styledSocial = createSocial(socialLinks);
+export const logBio = (isBio: boolean) => {
+  if (isBio) {
+    console.log(bioColor(bioText));
+  }
+};
+
+export const logSocial = (isSocial: boolean) => {
+  if (isSocial) {
+    console.log(createSocial(socialLinks));
+  }
+};
