@@ -1,8 +1,9 @@
-import { titleColor } from './utils/colors';
 import pkg from './package.json';
 
 /** Content */
-const title = `${pkg.author.name} - Software Engineer`;
+export const developerTitle = `${pkg.author.name} - Software Engineer`;
+
+export const gitHubHandle = `sun33t`;
 
 export const bioText = `
 Hi! I'm a developer from Liverpool, UK. I like building things with JavaScript and TypeScript and automating tasks by creating CLIs.
@@ -31,6 +32,3 @@ export const socialLinks = [
     titleColor: `#0077b5`,
   },
 ];
-
-/** Output */
-export const styledTitle = `${titleColor(title)}`;
