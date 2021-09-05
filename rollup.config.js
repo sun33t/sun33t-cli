@@ -10,36 +10,36 @@ import pkg from './package.json';
 const extensions = ['js', 'json', 'ts'];
 
 const externals = [
-	...Object.keys(pkg.dependencies || {}),
-	...Object.keys(pkg.devDependencies || {}),
-	...Object.keys(pkg.peerDependencies || {}),
+  ...Object.keys(pkg.dependencies || {}),
+  ...Object.keys(pkg.devDependencies || {}),
+  ...Object.keys(pkg.peerDependencies || {}),
 ];
 
 const config = {
-	input: 'index.ts',
-	output: {
-		file: pkg.main,
-		format: 'esm',
-	},
-	external: externals,
-	plugins: [
-		del({ targets: ['dist'] }),
-		shebang(),
-		json(),
-		nodeResolve({ extensions }),
-		commonjs(),
-		typescript({
-			tsconfigOverride: {
-				exclude: ['node_modules'],
-			},
-		}),
-		copy({
-			targets: [
-				{ src: 'README.md', dest: 'dist' },
-				{ src: 'LICENSE', dest: 'dist' },
-			],
-		}),
-	],
+  input: 'index.ts',
+  output: {
+    file: pkg.main,
+    format: 'esm',
+  },
+  external: externals,
+  plugins: [
+    del({ targets: ['dist'] }),
+    shebang(),
+    json(),
+    nodeResolve({ extensions }),
+    commonjs(),
+    typescript({
+      tsconfigOverride: {
+        exclude: ['node_modules'],
+      },
+    }),
+    copy({
+      targets: [
+        { src: 'README.md', dest: 'dist' },
+        { src: 'LICENSE', dest: 'dist' },
+      ],
+    }),
+  ],
 };
 
 export default config;
